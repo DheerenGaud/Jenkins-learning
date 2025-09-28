@@ -41,6 +41,9 @@ pipeline {
         }
         stage('Report') {
             steps {
+                echo 'Making Artifect file....'
+            }
+            steps {
                 echo 'Reporting....'
             }
         }
