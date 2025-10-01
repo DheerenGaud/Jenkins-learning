@@ -4,6 +4,8 @@ pipeline {
         stage("Clone") {
             steps {
                 echo "clone the project"
+                git url:"https://github.com/DheerenGaud/Jenkins-learning.git",
+                branch : "declarative_pipeline"
             }
         }
         stage("Build") {
