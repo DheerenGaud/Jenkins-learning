@@ -1,23 +1,23 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("Clone"){
-            step{
-                echo "clone the poject"
+    stages {
+        stage("Clone") {
+            steps {
+                echo "clone the project"
             }
         }
-        stage("Build"){
-            step{
+        stage("Build") {
+            steps {
                 echo "Code Build Stage"
             }
         }
-        stage("Test"){
-           step{
+        stage("Test") {
+            steps {
                 echo "test started"
             }
         }
-        stage("Deploy"){
-           step{
+        stage("Deploy") {
+            steps {
                 echo "Deployed done"
             }
         }
