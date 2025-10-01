@@ -1,36 +1,24 @@
-pipeline {
+pipeline{
     agent any
-    parameters {
-        choice(name: 'NUMBER',
-            choices: [10,20,30,40,50,60,70,80,90],
-            description: 'Select the value for F(n) for the Fibonnai sequence.')
-    }
-    options {
-        buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '10'))
-        timeout(time: 12, unit: 'HOURS')
-        timestamps()
-    }
-    stages {
-        stage('Make executable') {
-            steps {
-                sh('chmod +x ./scripts/fibonacci.sh')
+    stages{
+        stage("Clone"){
+            step{
+                echo "clone the poject"
             }
         }
-        stage('Relative path') {
-            steps {
-                sh("./scripts/fibonacci.sh ${env.NUMBER}")
+        stage("Build"){
+            step{
+                echo "Code Build Stage"
             }
         }
-        stage('Full path') {
-            steps {
-                sh("${env.WORKSPACE}/scripts/fibonacci.sh ${env.NUMBER}")
+        stage("Test"){
+           step{
+                echo "test started"
             }
         }
-        stage('Change directory') {
-            steps {
-                dir("${env.WORKSPACE}/scripts"){
-                    sh("./fibonacci.sh ${env.NUMBER}")
-                }
+        stage("Deploy"){
+           step{
+                echo "Deployed done"
             }
         }
     }
