@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dheeren Gaud - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f6fa; color: #2f3640; }
+    header { background: #273c75; color: white; padding: 20px 0; text-align: center; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; }
+
+    nav { background: #192a56; display: flex; justify-content: center; }
+    nav a { color: white; text-decoration: none; padding: 15px 20px; display: block; }
+    nav a:hover { background: #718093; }
+
+    section { padding: 50px 10%; }
+    section h2 { margin-bottom: 20px; color: #273c75; border-bottom: 2px solid #dcdde1; display: inline-block; }
+
+    .about p { margin-bottom: 20px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 2px 6px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 10px; color: #40739e; }
+
+    .skills span { display: inline-block; background: #40739e; color: white; padding: 5px 10px; border-radius: 5px; margin: 5px; }
+
+    footer { background: #2f3640; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dheeren Gaud</h1>
+    <p>Information Technology Student | Web Development | DevOps | Problem Solving</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#doing">What I'm Doing</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm Dheeren Gaud, an Information Technology student passionate about Web Development, DevOps, and collaborative systems. I love solving complex problems with scalable solutions.</p>
+    <p>I've worked with technologies like React, Node.js, MongoDB, Django, Sockets, Jenkins, Docker, JDBC, PostgreSQL, Maven, JUnit, and AWS. I enjoy exploring tools that improve app development and streamline workflows.</p>
+  </section>
+
+  <section id="doing">
+    <h2>What I'm Doing</h2>
+    <div class="grid">
+      <div class="card"><h3>Web Development</h3><p>Building responsive and scalable apps using MERN, PostgreSQL, and JUnit.</p></div>
+      <div class="card"><h3>Backend Development</h3><p>Developing robust backend systems with Node.js, Django, and Java.</p></div>
+      <div class="card"><h3>Data Structures & Algorithms</h3><p>Optimizing algorithms for efficient problem-solving.</p></div>
+      <div class="card"><h3>DevOps Journey</h3><p>Learning CI/CD, Jenkins, Docker, and Kubernetes.</p></div>
+      <div class="card"><h3>Freelance Projects</h3><p>Delivering high-quality client solutions.</p></div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="grid">
+      <div class="card"><h3>Techathon 2024</h3><p>3rd Runners-up at Kongsberg Maritime Hackathon (Team DYN4MITE).</p></div>
+      <div class="card"><h3>HackSparrow 2024</h3><p>2nd Prize (Team Rocket) with ₹10,000 award.</p></div>
+      <div class="card"><h3>FCRIT CodeCombat</h3><p>Participated in DSA competition, enhancing problem-solving skills.</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card"><h3>FCRIT, Vashi</h3><p>B.Tech IT (2021-2025), CGPA: 8.47</p></div>
+      <div class="card"><h3>SGM Jr College</h3><p>HSC (2020), 69%</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card"><h3>Frontend Developer - Fuchicorp</h3><p>Built subscription cart, improved UX.</p></div>
+      <div class="card"><h3>Backend Developer - Atplands</h3><p>Integrated Google authentication.</p></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>React</span><span>Node.js</span><span>MongoDB</span><span>PostgreSQL</span>
+      <span>Django</span><span>Flask</span><span>Java</span><span>Maven</span>
+      <span>JUnit</span><span>Sockets</span><span>Docker</span><span>Kubernetes</span>
+      <span>Jenkins</span><span>Git & GitHub</span><span>Linux</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Predictive Maintenance System</h3><p>AI-powered system to predict machinery failures with 98.7% accuracy.</p></div>
+      <div class="card"><h3>WhatsApp Clone</h3><p>Real-time communication app with messaging, video calling, and file sharing.</p></div>
+      <div class="card"><h3>Face Attendance System</h3><p>Face recognition-based attendance hosted on AWS.</p></div>
+      <div class="card"><h3>Savaaree</h3><p>Ride-sharing cost reduction app built with React, Redux, and MongoDB.</p></div>
+      <div class="card"><h3>Custom Chatbot</h3><p>Interactive chatbot for college info with teacher scheduling.</p></div>
+      <div class="card"><h3>MCQ Test Platform</h3><p>Quiz platform with analysis for students, built using MongoDB & Express.</p></div>
+      <div class="card"><h3>Gym UI</h3><p>Responsive single-page gym website with modern UI.</p></div>
+      <div class="card"><h3>Ludo Game</h3><p>Interactive online ludo game using HTML, CSS & JS.</p></div>
+      <div class="card"><h3>Subscription UI</h3><p>Modern subscription pricing UI with responsive design.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Dheeren Gaud | Built with ❤️ using HTML & CSS</p>
+  </footer>
+</body>
+</html>

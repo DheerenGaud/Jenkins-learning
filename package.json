@@ -1,0 +1,22 @@
+{
+  "name": "jenkins-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DheerenGaud/Jenkins-learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DheerenGaud/Jenkins-learning/issues"
+  },
+  "homepage": "https://github.com/DheerenGaud/Jenkins-learning#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,73 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Build output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Logs
+logs
+*.log
+*.log.*
+*.out
+*.pid
+*.gz
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Temporary
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+
+# Editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jest / testing
+coverage/
+.nyc_output/
+
+# Docker
+.dockerignore
+
+# Jenkins / CI/CD
+/workspace/
+*.war
+*.jar
+
+# Misc
+*.tgz
