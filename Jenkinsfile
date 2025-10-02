@@ -5,7 +5,9 @@ pipeline {
     stages {
         stage("Clone") {
             steps {
+                script{
                 clone("https://github.com/DheerenGaud/Jenkins-learning.git","declarative_pipeline")
+                }
             }
         }
         stage("Build") {
@@ -20,7 +22,9 @@ pipeline {
       stage("Push to DockerHub") {
           steps {
              echo "Pushing to Docker Hub"
+             script{
              dockerPush("node_jenkins_app", "dheerengaud/node_jenkins_app","dockerCredentials")
+             }
             }
        }
       stage("Deploy") {
