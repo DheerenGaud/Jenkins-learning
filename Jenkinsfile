@@ -11,9 +11,9 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Code Build Stage"
-                dir("Jenkins-learning"){
-                   sh "docker build -t node_jenkins_app ."
-                }
+                // dir("Jenkins-learning"){
+                //    sh "docker build -t node_jenkins_app ."
+                // }
             }
 
         }
