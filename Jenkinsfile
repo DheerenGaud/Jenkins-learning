@@ -1,9 +1,13 @@
+@Library("Shared) _
 pipeline {
     agent { label "dev" }
 
     stages {
         stage("Clone") {
             steps {
+                scripts{
+                     hello()
+                }
                 echo "clone the project"
                 git url:"https://github.com/DheerenGaud/Jenkins-learning.git",
                 branch : "declarative_pipeline"
