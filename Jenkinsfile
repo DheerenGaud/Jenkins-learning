@@ -20,14 +20,15 @@ pipeline {
             }
         }
 
-        stage("Push to DockerHub") {
-            steps {
-                echo "Pushing to Docker Hub"
-                script {
-                    dockerPush("node_jenkins_app", "dheerengaud/node_jenkins_app", "dockerCredentials")
-                }
-            }
+stage("Push to DockerHub") {
+    steps {
+        echo "Pushing to Docker Hub"
+        script {
+            dockerPush("node_jenkins_app", "dheerengaud/node_jenkins_app", "dockerCredentials")
         }
+    }
+}
+
 
         stage("Deploy") {
             steps {
