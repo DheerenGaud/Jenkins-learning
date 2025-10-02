@@ -5,32 +5,34 @@ pipeline {
     stages {
         stage("Clone") {
             steps {
-                script{
-                clone("https://github.com/DheerenGaud/Jenkins-learning.git","declarative_pipeline")
+                script {
+                    clone("https://github.com/DheerenGaud/Jenkins-learning.git", "declarative_pipeline")
                 }
             }
         }
+
         stage("Build") {
             steps {
                 echo "Code Build Stage"
-                script{
-                 docker_build("node_jenkins_app","latest")
+                script {
+                    docker_build("node_jenkins_app", "latest")
                 }
             }
-
         }
-      stage("Push to DockerHub") {
-          steps {
-             echo "Pushing to Docker Hub"
-             script{
-             dockerPush("node_jenkins_app", "dheerengaud/node_jenkins_app","dockerCredentials")
-             }
+
+        stage("Push to DockerHub") {
+            steps {
+                echo "Pushing to Docker Hub"
+                script {
+                    dockerPush("node_jenkins_app", "dheerengaud/node_jenkins_app", "dockerCredentials")
+                }
             }
-       }
-      stage("Deploy") {
+        }
+
+        stage("Deploy") {
             steps {
                 sh "docker compose up -d"
-                echo "Deployed done"
+                echo "Deploy done ✅"
             }
         }
     }
