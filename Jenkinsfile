@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {lable "dev" }
     stages {
         stage("Clone") {
             steps {
