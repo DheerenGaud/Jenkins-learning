@@ -12,17 +12,23 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Code Build Stage"
-                // dir("Jenkins-learning"){
                   sh "docker build -t node_jenkins_app ."
-                // }
             }
 
         }
-        stage("Test") {
-            steps {
-                echo "test started"
+      stage("Push to DockerHub") {
+         steps {
+            echo "Pushing to Docker Hub"
+            withCredentials([usernamePassword(credentialsId: 'dockerCredentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+            sh """
+                echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                docker image tag node_jenkins_app dheerengaud/node_jenkins_app:latest
+                docker push dheerengaud/node_jenkins_app:latest
+            """
             }
-        }
+         }
+      }
+
         stage("Deploy") {
             steps {
                 sh "docker compose up -d"
