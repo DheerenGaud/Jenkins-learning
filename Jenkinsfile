@@ -25,7 +25,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "docker run -d -p 3000:3000 node_jenkins_app"
+                sh "docker compose up -d"
                 echo "Deployed done"
             }
         }
