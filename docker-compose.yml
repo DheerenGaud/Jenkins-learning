@@ -1,5 +1,5 @@
 services:
   web:
-    build: .
+    image: "dheerengaud/node_jenkins_app:latest"
     ports:
       - "3000:3000"
